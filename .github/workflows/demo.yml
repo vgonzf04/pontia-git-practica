@@ -1,0 +1,11 @@
+on:
+	workflow_dispatch:
+		inputs:
+			mensaje:
+				required: true
+
+jobs:
+	demo:
+		runs-on: ubuntu-latest
+		steps:
+			- run: echo "${{ inputs.mensaje }}"
